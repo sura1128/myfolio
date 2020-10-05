@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import ProjectList from './ProjectList';
+import { projects } from './projects'
+import SearchBox from './SearchBox'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+    constructor() {
+        super()
+        this.state = {
+            projects: projects,
+            searchfield: ''
+        }
+    }
+    onSearchChange = (event) => {
+        this.setState({searchfield: event.target.value});
+    }
+    render() {
+        const filteredProjs = this.state.projects.filter(projects => {
+            return projects.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+        });
+        return (
+            <div className='tc'>
+                <h1 className="f1"> SURANJANA SENGUPTA </h1>
+                <SearchBox searchChange={this.onSearchChange} />
+                <ProjectList projects={filteredProjs}/>
+            </div>
+        );
+    }
 }
 
 export default App;
