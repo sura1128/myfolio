@@ -1,30 +1,28 @@
 import React, {Component} from 'react';
-import ProjectList from './ProjectList';
-import { projects } from './projects'
-import SearchBox from './SearchBox'
+import AboutCard from './About.js';
+import Menu from './Menu.js';
+import Cover from './Cover.js';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
-
 
 class App extends Component {
     constructor() {
         super()
-        this.state = {
-            projects: projects,
-            searchfield: ''
-        }
     }
-    onSearchChange = (event) => {
-        this.setState({searchfield: event.target.value});
-    }
+    // onSearchChange = (event) => {
+    //     // needs to be re-rendered
+    //     this.setState({searchfield: event.target.value});
+    // }
     render() {
-        const filteredProjs = this.state.projects.filter(projects => {
-            return projects.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
-        });
+        // const filteredProjs = this.state.projects.filter(projects => {
+        //     return projects.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+        // });
         return (
-            <div className='tc'>
-                <h1 className="f1"> SURANJANA SENGUPTA </h1>
-                <SearchBox searchChange={this.onSearchChange} />
-                <ProjectList projects={filteredProjs}/>
+            <div>
+                <Cover />
+                <Menu />
+                {/* <SearchBox searchChange={this.onSearchChange} /> */}
+                <AboutCard />
             </div>
         );
     }

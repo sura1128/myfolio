@@ -1,11 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+@import url('<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">');
 
-h1 {
-  font-family: 'Libre Baskerville', serif;;
-  color: #aaaaaa;
-  padding-top: 25px;
+body, head {
+  font-family: 'Quicksand', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background: #ebecf1;
+}
+.cover {
+  background: #020a33;
+  margin: 3px;
+  padding: 50px 30px 50px 30px;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+  text-align: center;
+}
+#myname {
+  font-size: 5vh;
+  color: lightgray;
+  font-family: 'Libre Baskerville', serif;
+}
+.subtitle {
+  margin-top: 10px;
+  font-size: 2vh;
+  color: lightgray;
+  opacity: 0.7;
 }
 
-h2 {
-    color: #00334e;
+.menu {
+  border: 1px solid #DEE1E7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu li {
+  display: inline-block;
+  font-size: 2vh;
+}
+
+.about {
+  padding-top: 50px; 
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.info {
+  flex-basis: 25%;
+  word-wrap: break-word;
+}
+
+img {
+  height: 50vh;
 }
