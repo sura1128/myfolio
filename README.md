@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Alt text](/src/readme_pic.png)
+![Alt text](/src/images/readme_pic.png)
 
 ## Available Scripts
 
