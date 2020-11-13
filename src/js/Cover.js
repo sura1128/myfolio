@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'
+import '../styles/App.css'
 
 
 const Cover = (props) => {
@@ -8,7 +8,7 @@ const Cover = (props) => {
             <div id="myname">
                 Hi, I am Suranjana.
             </div>
-            <div class="subtitle">
+            <div className="subtitle">
                 This is my portfolio for Front-end Development, UX Design and other projects.<br/>
             </div>
         </div>
