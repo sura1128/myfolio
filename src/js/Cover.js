@@ -6,10 +6,10 @@ const Cover = (props) => {
     return (
         <div className="cover">
             <div id="myname">
-                Hi, I am Suranjana.
+                Suranjana Sengupta
             </div>
             <div className="subtitle">
-                This is my portfolio for Front-end Development, UX Design and other projects.<br/>
+                Portfolio for Front-end Development, UX Design and other projects.<br/>
             </div>
         </div>
     );
