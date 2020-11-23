@@ -7,11 +7,63 @@ export const pages = [
     },
     {
         id: 2,
-        name: 'front end',
-        description: 'this is about web front end'
+        name: 'frontend',
+        description: 'this is about web front end',
+        projects: {
+            p1: {
+                title: "VirtualLib",
+                subtitle: "Revamping the NLB website for a better online experience during the pandemic."
+            },
+            p2: {
+                title: "ArtWork",
+                subtitle: "Recreating a LinkedIn-like platform for creatives to network and find gigs"
+            },
+            p3: {
+                title: "Healthier",
+                subtitle: "Reimagining a productivity website centered on mental health and wellness"
+            }
+        }
     },
     {
         id: 3,
+        name: 'uresearch',
+        description: 'this is about ux research',
+        projects: {
+            p1: {
+                title: "VirtualLib",
+                subtitle: "Revamping the NLB website for a better online experience during the pandemic."
+            },
+            p2: {
+                title: "ArtWork",
+                subtitle: "Recreating a LinkedIn-like platform for creatives to network and find gigs"
+            },
+            p3: {
+                title: "Healthier",
+                subtitle: "Reimagining a productivity website centered on mental health and wellness"
+            }
+        }
+    },
+    {
+        id: 4,
+        name: 'interaction',
+        description: 'this is about interaction',
+        projects: {
+            p1: {
+                title: "VirtualLib",
+                subtitle: "Revamping the NLB website for a better online experience during the pandemic."
+            },
+            p2: {
+                title: "ArtWork",
+                subtitle: "Recreating a LinkedIn-like platform for creatives to network and find gigs"
+            },
+            p3: {
+                title: "Healthier",
+                subtitle: "Reimagining a productivity website centered on mental health and wellness"
+            }
+        }
+    },
+    {
+        id: 5,
         name: 'art',
         description: 'this is about art'
     }

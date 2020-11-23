@@ -3,14 +3,19 @@ import MainDisplay from './MainDisplay.js';
 import Cover from './Cover.js';
 import { pages } from './Pages.js'
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import '../styles/App.css'
+
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             displays: pages,
-            page_id: 'About'
+            page_id: 'About',
+            btn_bg: 'btn btn-light btn-sm'
         };
         this.onButtonClick = this.onButtonClick.bind(this);
     }
@@ -18,25 +23,36 @@ class App extends Component {
         event.preventDefault();
         this.setState({
             displays: pages,
-            page_id: event.target.id
+            page_id: event.target.id,
+            btn_bg: 'btn btn-dark btn-sm'
         });
     }
     render() {
         const filtered_displays = this.state.displays.filter((display) => {
             return display.name.toLowerCase().includes(this.state.page_id.toLowerCase())
         });
+        // className="btn btn-light btn-sm" 
         return (
             <div>
                 <Cover />
                 <div className="menu">
-                    <ul>
-                        <li> <button type="button" className="btn btn-dark btn-sm" id="about" onClick={this.onButtonClick}> About </button> </li>
-                        <li> <button type="button" className="btn btn-light btn-sm"> Front-end </button> </li>
-                        <li> <button type="button" className="btn btn-light btn-sm"> UX Research </button> </li>
-                        <li> <button type="button" className="btn btn-light btn-sm"> Interaction Design </button> </li>
-                        <li> <button type="button" className="btn btn-light btn-sm"> Art and Illustration </button> </li>
-                        <li> <button type="button" className="btn btn-light btn-sm"> Contact </button> </li>
-                    </ul>
+                    <Nav className="justify-content-center" variant="pills" defaultActiveKey="/home">
+                        <Nav.Item>
+                            <Nav.Link className="btn btn-light btn-sm" href="/home" id="about" onClick={this.onButtonClick}>About</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link className="btn btn-light btn-sm" id="frontend" eventKey="link-1" onClick={this.onButtonClick}>Front-end</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link className="btn btn-light btn-sm" id="uresearch" eventKey="link-2" onClick={this.onButtonClick}>UX Research</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link className="btn btn-light btn-sm" id="interaction" eventKey="link-3" onClick={this.onButtonClick}>Interaction Design</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link className="btn btn-light btn-sm" id="art" eventKey="link-4" onClick={this.onButtonClick}>Art and Illustration</Nav.Link>
+                        </Nav.Item>
+                    </Nav>
                 </div>
                 <MainDisplay filtered_displays={filtered_displays}/>
             </div>
