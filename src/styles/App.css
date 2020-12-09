@@ -49,28 +49,50 @@ body, head {
 }
 .frontend_projects {
   padding-top: 100px;
-  margin: 0px 60px 0px 60px;
+  margin: 50px 200px 0px 200px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
-.project {
+
+.project_parent {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 400px;
+  max-height: 400px;
 }
+
 .project_title {
-  margin-top: 7px;
+  margin-top: 11px;
   font-size: 2vh;
 }
+
+.project_title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .project_subtitle {
   margin-top: 3px;
-  font-size: 1.7vh;
+  font-size: 1.4vh;
   text-align: center;
   font-style: italic;
   color: gray;
+  overflow: none;
+  width: 70%;
 }
+
 .frontend_imgs {
-  max-width: 90%;
-  max-height: 300px;
+  max-width: 60%;
+  max-height: 35vh;
+  overflow: none;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.frontend_imgs:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  cursor: pointer;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/App.css'
+import '../styles/App.css';
 
 const About = ({params}) => {
     return (
@@ -12,21 +12,26 @@ const About = ({params}) => {
     )
 }
 
+const FrontEndImg = {
+    //backgroundImage: 'url("../images/fe_project1.jpg")',
+    backgroundImage: 'url("https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png")'
+};
+
 const FrontEnd = ({params}) => {
     return (
         <div className="frontend_projects">
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project1.jpg")} alt="Photo by matthew Feeney on Unsplash. Link: https://unsplash.com/photos/Nwkh-n6l25w"></img>
+            <div className="project_parent">
+                <img className="frontend_imgs" src={require("../images/fe_project1.png")} alt="Photo by matthew Feeney on Unsplash. Link: https://unsplash.com/photos/Nwkh-n6l25w"></img>
                 <div className="project_title">{params.projects.p1.title}</div>
                 <div className="project_subtitle">{params.projects.p1.subtitle}</div>
             </div>
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project2.jpg")} alt="Photo by Amauri Mejía on Unsplash. Link: https://unsplash.com/photos/IhXrWDckZOQ"></img>
+            <div className="project_parent">
+                <img className="frontend_imgs" src={require("../images/fe_project2.png")} alt="Photo by Amauri Mejía on Unsplash. Link: https://unsplash.com/photos/IhXrWDckZOQ"></img>
                 <div className="project_title">{params.projects.p2.title}</div>
                 <div className="project_subtitle">{params.projects.p2.subtitle}</div>
             </div>
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project3.jpg")} alt="Photo by Miti on Unsplash. Link: https://unsplash.com/photos/DFtvglCPWjY"></img>
+            <div className="project_parent">
+                <img className="frontend_imgs" src={require("../images/fe_project3.png")} alt="Photo by Miti on Unsplash. Link: https://unsplash.com/photos/DFtvglCPWjY"></img>
                 <div className="project_title">{params.projects.p3.title}</div>
                 <div className="project_subtitle">{params.projects.p3.subtitle}</div>
             </div>
@@ -37,18 +42,24 @@ const FrontEnd = ({params}) => {
 const UXResearch = ({params}) => {
     return (
         <div className="frontend_projects">
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project1.jpg")} alt="Photo by matthew Feeney on Unsplash. Link: https://unsplash.com/photos/Nwkh-n6l25w"></img>
+            <div className="project_parent">
+                <div className="project_child">
+                    <img className="frontend_imgs" src={require("../images/fe_project1.jpg")} alt="Photo by matthew Feeney on Unsplash. Link: https://unsplash.com/photos/Nwkh-n6l25w"></img>
+                </div>
                 <div className="project_title">{params.projects.p1.title}</div>
                 <div className="project_subtitle">{params.projects.p1.subtitle}</div>
             </div>
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project2.jpg")} alt="Photo by Amauri Mejía on Unsplash. Link: https://unsplash.com/photos/IhXrWDckZOQ"></img>
+            <div className="project_parent">
+                <div className="project_child">
+                    <img className="frontend_imgs" src={require("../images/fe_project2.jpg")} alt="Photo by Amauri Mejía on Unsplash. Link: https://unsplash.com/photos/IhXrWDckZOQ"></img>
+                </div>
                 <div className="project_title">{params.projects.p2.title}</div>
                 <div className="project_subtitle">{params.projects.p2.subtitle}</div>
             </div>
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project3.jpg")} alt="Photo by Miti on Unsplash. Link: https://unsplash.com/photos/DFtvglCPWjY"></img>
+            <div className="project_parent">
+                <div className="project_child">
+                    <img className="frontend_imgs" src={require("../images/fe_project3.jpg")} alt="Photo by Miti on Unsplash. Link: https://unsplash.com/photos/DFtvglCPWjY"></img>
+                </div>
                 <div className="project_title">{params.projects.p3.title}</div>
                 <div className="project_subtitle">{params.projects.p3.subtitle}</div>
             </div>
@@ -59,18 +70,24 @@ const UXResearch = ({params}) => {
 const InteractionDesign = ({params}) => {
     return (
         <div className="frontend_projects">
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project1.jpg")} alt="Photo by matthew Feeney on Unsplash. Link: https://unsplash.com/photos/Nwkh-n6l25w"></img>
+            <div className="project_parent">
+                <div className="project_child">
+                    <img className="frontend_imgs" src={require("../images/fe_project1.jpg")} alt="Photo by matthew Feeney on Unsplash. Link: https://unsplash.com/photos/Nwkh-n6l25w"></img>
+                </div>
                 <div className="project_title">{params.projects.p1.title}</div>
                 <div className="project_subtitle">{params.projects.p1.subtitle}</div>
             </div>
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project2.jpg")} alt="Photo by Amauri Mejía on Unsplash. Link: https://unsplash.com/photos/IhXrWDckZOQ"></img>
+            <div className="project_parent">
+                <div className="project_child">
+                    <img className="frontend_imgs" src={require("../images/fe_project2.jpg")} alt="Photo by Amauri Mejía on Unsplash. Link: https://unsplash.com/photos/IhXrWDckZOQ"></img>
+                </div>
                 <div className="project_title">{params.projects.p2.title}</div>
                 <div className="project_subtitle">{params.projects.p2.subtitle}</div>
             </div>
-            <div className="project">
-                <img className="frontend_imgs" src={require("../images/fe_project3.jpg")} alt="Photo by Miti on Unsplash. Link: https://unsplash.com/photos/DFtvglCPWjY"></img>
+            <div className="project_parent">
+                <div className="project_child">
+                    <img className="frontend_imgs" src={require("../images/fe_project3.jpg")} alt="Photo by Miti on Unsplash. Link: https://unsplash.com/photos/DFtvglCPWjY"></img>
+                </div>
                 <div className="project_title">{params.projects.p3.title}</div>
                 <div className="project_subtitle">{params.projects.p3.subtitle}</div>
             </div>
