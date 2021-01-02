@@ -64,7 +64,7 @@ export const pages = [
     },
     {
         id: 5,
-        name: 'art',
-        description: 'this is about art'
+        name: 'contact',
+        description: 'this is a contact page'
     }
 ]

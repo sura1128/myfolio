@@ -96,3 +96,12 @@ body, head {
   filter: grayscale(0%);
   cursor: pointer;
 }
+
+.contact {
+  margin: 50px 150px;
+  text-align: center;
+}
+
+.submit {
+  margin-top: 20px;
+}

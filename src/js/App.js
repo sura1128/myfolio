@@ -5,7 +5,6 @@ import { pages } from './Pages.js'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import '../styles/App.css'
 
 
@@ -50,7 +49,7 @@ class App extends Component {
                             <Nav.Link className="btn btn-light btn-sm" id="interaction" eventKey="link-3" onClick={this.onButtonClick}>Interaction Design</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link className="btn btn-light btn-sm" id="art" eventKey="link-4" onClick={this.onButtonClick}>Art and Illustration</Nav.Link>
+                            <Nav.Link className="btn btn-light btn-sm" id="contact" eventKey="link-4" onClick={this.onButtonClick}>Contact</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </div>
