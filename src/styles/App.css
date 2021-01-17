@@ -2,18 +2,19 @@
 
 body, head {
   font-family: 'Quicksand', sans-serif;
-  width: 100vw;
-  height: 100vh;
+  max-width: 99vw;
+  min-height: 150vh;
   background: #ebecf1;
 }
+/* Cover and Name */
 .cover {
   background: #020a33;
-  margin: 3px;
-  padding: 20px 30px 20px 30px;
+  max-height: 15vh;
+  margin: 0.3vh;
+  padding: 3vh 4vh;
+  border-radius: 3vh 3vh 0vh 0vh;
   color: white;
-  border-radius: 20px 20px 0px 0px;
   text-align: center;
-  height: 15vh;
 }
 #myname {
   font-size: 4vh;
@@ -21,33 +22,56 @@ body, head {
   font-family: 'Libre Baskerville', serif;
 }
 .subtitle {
-  margin-top: 5px;
+  margin-top: 0.75vh;
   font-size: 1.5vh;
   color: lightgray;
   opacity: 0.7;
 }
+/* Navigation Bar */
 .nav-link:active {
   background-color: gray;
 }
 .nav-item {
-  margin: 0px 2px 0px 2px;
+  margin: 0px 0.1vh 0px 0.1vh;
 }
+
+/* About and Info */
 .about {
-  padding-top: 100px;
+  padding-top: 9vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
-}
-.info {
-  word-wrap: break-word;
-  justify-self: center;
-  align-self: center;
+  grid-template-columns: repeat(auto-fit, minmax(25vh, 1fr));
+  grid-gap: 1vh;
 }
 .profile_img {
   height: 50vh;
   justify-self: center;
   align-self: center;
+  float: left;
+  width: 80%;
+  height: 80%;
 }
+.info {
+  word-wrap: break-word;
+  justify-self: center;
+  align-self: center;
+  float: right;
+  width: 80%;
+  height: 80%;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 900px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .profile_img, .info {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+/* Projects */
 .frontend_projects {
   padding-top: 100px;
   margin: 30px 150px 0px 150px;

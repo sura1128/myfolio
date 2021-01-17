@@ -33,6 +33,7 @@ class App extends Component {
         // className="btn btn-light btn-sm" 
         return (
             <div>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <Cover />
                 <div className="menu">
                     <Nav className="justify-content-center" variant="pills" defaultActiveKey="/home">
