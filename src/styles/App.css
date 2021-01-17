@@ -68,6 +68,8 @@ body, head {
   .profile_img, .info {
     grid-column: auto;
     grid-row: auto;
+    height: 50%;
+    width: 60%;
   }
 }
 
